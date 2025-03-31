@@ -12,14 +12,16 @@ function App() {
         <div className="App" style={{ paddingTop: "70px" }}>
             <Navbar />
             
-            <label>Name</label>
-            <TextBox onChange={setName} />
+            <div className="test">
+                <label>Name</label>
+                <TextBox onChange={setName} />
 
-            <label>About</label>
-            <TextArea onChange={setAbout} />
+                <label>About</label>
+                <TextArea onChange={setAbout} />
 
-            <p>Your Name: {name}</p>
-            <p>About: {about}</p>
+                <p>Your Name: {name}</p>
+                <p>About: {about}</p>
+            </div>
         </div>
     );
 }
