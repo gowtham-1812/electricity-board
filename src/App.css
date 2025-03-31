@@ -1,0 +1,8 @@
+/* Temporary margin for better visibility */
+body {
+    margin: 5px;
+}
+
+div > * {
+    margin-top: 5px;
+}
