@@ -11,7 +11,7 @@ function TextArea({ onChange }) {
 
     return (
         <div>
-            <textarea className="text-area" onChange={handleChange}>{input}</textarea>
+            <textarea className="text-area" value={input} onChange={handleChange} />
         </div>
     );
 }
