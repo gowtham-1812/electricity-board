@@ -3,6 +3,7 @@ import Navbar from "./Navbar.jsx";
 import TextBox from "./Components/TextBox.jsx";
 import TextArea from "./Components/TextArea.jsx"
 import "./App.css";
+import Carousel from "./Components/Carousel.jsx";
 
 function App() {
     const [name, setName] = useState("");
@@ -11,17 +12,7 @@ function App() {
     return(
         <div className="App" style={{ paddingTop: "70px" }}>
             <Navbar />
-            
-            <div className="test">
-                <label>Name</label>
-                <TextBox onChange={setName} />
-
-                <label>About</label>
-                <TextArea onChange={setAbout} />
-
-                <p>Your Name: {name}</p>
-                <p>About: {about}</p>
-            </div>
+            <Carousel />
         </div>
     );
 }

@@ -1,8 +1,0 @@
-/* Temporary margin for better visibility */
-body {
-    margin: 5px;
-}
-
-.test > * {
-    margin-top: 5px;
-}
