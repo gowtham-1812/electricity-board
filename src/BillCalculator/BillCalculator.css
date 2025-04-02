@@ -1,8 +1,8 @@
-.App {
+/* .App {
   padding: 20px;
   max-width: 1000px;
   margin: 0 auto;
-}
+} */
 
 .bill-calculator {
   font-family: Arial, sans-serif;
@@ -46,9 +46,9 @@ button {
   margin-right: 10px;
 }
 
-button:hover {
+/* button:hover {
   background-color: #45a049;
-}
+} */
 
 .calculation-result {
   background: #e8f5e9;
