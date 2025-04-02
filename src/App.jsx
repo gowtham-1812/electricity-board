@@ -3,6 +3,7 @@ import Navbar from "./Navbar.jsx";
 import TextBox from "./Components/TextBox.jsx";
 import TextArea from "./Components/TextArea.jsx"
 import "./App.css";
+import BillCalculator from "./BillCalculator.jsx";
 
 function App() {
     const [name, setName] = useState("");
@@ -12,7 +13,7 @@ function App() {
         <div className="App" style={{ paddingTop: "70px" }}>
             <Navbar />
             
-            <div className="test">
+            {/* <div className="test">
                 <label>Name</label>
                 <TextBox onChange={setName} />
 
@@ -21,7 +22,9 @@ function App() {
 
                 <p>Your Name: {name}</p>
                 <p>About: {about}</p>
-            </div>
+            </div> */}
+
+            <BillCalculator></BillCalculator>
         </div>
     );
 }
