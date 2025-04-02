@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar/Navbar.jsx";
-import Carousel from "./Carousel/Carousel_2.jsx";
+import Carousel from "./Carousel/Carousel_map.jsx";
 import "./App.css";
 import BillCalculator from "./BillCalculator.jsx";
 
