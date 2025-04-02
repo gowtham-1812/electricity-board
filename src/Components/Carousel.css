@@ -1,0 +1,24 @@
+.carousel {
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+#myCarousel {
+    height: 512px;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-item svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 100%;
+}
