@@ -1,0 +1,59 @@
+/* Current Updates Section */
+.updates-container {
+    width: 40vw;  /* 40% of the viewport width */
+    height: calc(40vw * 9 / 16);  /* 16:9 aspect ratio */
+    max-height: 80vh;  /* Maximum height limit */
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+.updates-box {
+    width: 90%;
+    height: 80%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.update-card {
+    background: hsl(219, 100%, 71%);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.update-card:hover {
+    transform: scale(1.05);
+}
+
+/* Graphs Section */
+.graph-container {
+    width: 40vw; /* 50% of viewport width */
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-left: 29.7%;
+}
+
+.graph-search {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}

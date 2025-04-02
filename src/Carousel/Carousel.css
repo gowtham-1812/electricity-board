@@ -1,0 +1,51 @@
+.carousel {
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+#myCarousel {
+    height: 512px;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carousel-caption .btn {
+    min-width: 150px;
+}
+
+@media (max-width: 768px) {
+    .carousel-caption h1 {
+        font-size: 1.5rem;
+    }
+    .carousel-caption .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}

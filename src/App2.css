@@ -1,0 +1,41 @@
+:root {
+    --primary: #3a7bff;       /* Main brand color */
+    --primary-dark: #2c5cc5;  /* Darker shade for hover states */
+    --primary-light: #a0c1ff; /* Lighter shade for accents */
+    --secondary: #ffb74d;     /* Complementary orange for CTAs */
+    --dark: #2c3e50;         /* For text and dark elements */
+    --light: #f8f9fa;         /* Light background */
+    --success: #4caf50;       /* For positive actions */
+    --danger: #f44336;        /* For warnings/errors */
+}
+
+/* body {
+background-color: var(--light);
+color: var(--dark);
+} */
+
+:root {
+    /* Primary Colors - Deep Navy with Electric Blue Accents */
+    --primary: #1a3a8f;
+    --primary-light: #2a4da8;
+    --primary-dark: #0d2766;
+    
+    /* Secondary Colors */
+    --secondary: #ffd700; /* Gold instead of yellow for more elegance */
+    --secondary-dark: #e6c200;
+    
+    /* Background Colors */
+    --bg-light: #f8fafc;
+    --bg-white: #ffffff;
+    
+    /* Text Colors */
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --text-light: #f8fafc;
+    
+    /* Utility Colors */
+    --success: #10b981;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --info: #3b82f6;
+}
