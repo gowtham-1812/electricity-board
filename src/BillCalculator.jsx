@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./BilCalculator.css"
+import "./BillCalculator.css"
 import axios from "axios";
 import {
   LineChart,
@@ -14,7 +14,7 @@ import {
 
 const BillCalculator = () => {
   const [consumerNo, setConsumerNo] = useState("");
-  const [mobileNo, setMobileNo] = useState("");
+  const [mobile, setMobile] = useState("");
   const [user, setUser] = useState(null);
   const [calculation, setCalculation] = useState(null);
   const [history, setHistory] = useState([]);
@@ -30,10 +30,10 @@ const BillCalculator = () => {
 
       // Verify consumer
       const verification = await axios.post(
-        "http://localhost:5001/api/verify-consumer",
+        "http://localhost:5001/esb/verify-consumer",
         {
           consumerNo,
-          mobileNo,
+          mobile,
         }
       );
 
@@ -45,9 +45,8 @@ const BillCalculator = () => {
 
       setUser(verification.data.user);
 
-      // Get calculation
       const calcResponse = await axios.post(
-        "http://localhost:5001/api/calculate-bill",
+        "http://localhost:5001/esb/calculate-bill",
         {
           consumerNo,
         }
@@ -56,62 +55,74 @@ const BillCalculator = () => {
       setCalculation(calcResponse.data);
       setCurrentReading(calcResponse.data.currentReading.toString());
 
-      // Get history
-      const historyResponse = await axios.get(
-        `http://localhost:5001/api/reading-history/${consumerNo}`
+      const historyResponse = await axios.post(
+        `http://localhost:5001/esb/reading-history`,
+        {
+          consumerNo,
+        }
       );
       setHistory(historyResponse.data.readings);
-    } catch (err) {
+
+    } 
+    catch (err) 
+    {
       setError(
         err.response?.data?.error || err.message || "Failed to process request"
       );
       setUser(null);
       setCalculation(null);
-    } finally {
+    } 
+    finally 
+    {
       setLoading(false);
     }
   };
 
-  const handleSubmitReading = async () => {
-    if (!calculation || !currentReading || isNaN(parseInt(currentReading))) {
-      setError("Please enter a valid current reading");
-      return;
-    }
+  // const handleSubmitReading = async () => {
+  //   if (!calculation || !currentReading || isNaN(parseInt(currentReading))) {
+  //     setError("Please enter a valid current reading");
+  //     return;
+  //   }
 
-    try {
-      setLoading(true);
-      setError(null);
+  //   try {
+  //     setLoading(true);
+  //     setError(null);
 
-      const newReading = parseInt(currentReading);
-      const unitsConsumed = newReading - calculation.previousReading;
+  //     // const newReading = parseInt(currentReading);
+  //     // const unitsConsumed = newReading - calculation.previousReading;
 
-      await axios.post("http://localhost:5001/api/save-reading", {
-        userId: user.id,
-        consumerNo: user.consumerNo,
-        previousReading: calculation.previousReading,
-        currentReading: newReading,
-        unitsConsumed,
-        amount: calculateTariff(unitsConsumed),
-      });
 
-      // Refresh data
-      await fetchAndCalculate();
-    } catch (err) {
-      setError(
-        err.response?.data?.error || err.message || "Failed to save reading"
-      );
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     // user bill calculator does not have have permissions to change all this
+      
+  //     // await axios.post("http://localhost:5001/esb/save-reading", {
+  //     //   user: user,
+  //     //   consumerNo: consumerNo,
+  //     //   currentReading: currentReading,
 
-  const calculateTariff = (units) => {
-    // Match the server-side calculation
-    if (units <= 100) return units * 3.5;
-    if (units <= 200) return 100 * 3.5 + (units - 100) * 4.5;
-    if (units <= 300) return 100 * 3.5 + 100 * 4.5 + (units - 200) * 6.0;
-    return 100 * 3.5 + 100 * 4.5 + 100 * 6.0 + (units - 300) * 7.5;
-  };
+  //     // });
+
+  //     // await fetchAndCalculate();
+
+  //   } 
+  //   catch (err) 
+  //   {
+  //     setError(
+  //       err.response?.data?.error || err.message || "Failed to save reading"
+  //     );
+  //   } 
+  //   finally 
+  //   {
+  //     setLoading(false);
+  //   }
+  // };
+
+  // const calculateTariff = (units) => {
+  //   // Match the server-side calculation
+  //   if (units <= 100) return units * 3.5;
+  //   if (units <= 200) return 100 * 3.5 + (units - 100) * 4.5;
+  //   if (units <= 300) return 100 * 3.5 + 100 * 4.5 + (units - 200) * 6.0;
+  //   return 100 * 3.5 + 100 * 4.5 + 100 * 6.0 + (units - 300) * 7.5;
+  // };
 
   // Prepare chart data
   const chartData = history
@@ -170,15 +181,15 @@ const BillCalculator = () => {
           </label>
           <input
             type="text"
-            value={mobileNo}
-            onChange={(e) => setMobileNo(e.target.value)}
+            value={mobile}
+            onChange={(e) => setMobile(e.target.value)}
             style={{ padding: "8px", width: "100%", maxWidth: "300px" }}
             placeholder="Enter registered mobile number"
           />
         </div>
         <button
           onClick={fetchAndCalculate}
-          disabled={!consumerNo || !mobileNo || loading}
+          disabled={!consumerNo || !mobile || loading}
           style={{
             padding: "10px 15px",
             background: "#4CAF50",
@@ -271,7 +282,7 @@ const BillCalculator = () => {
               {new Date(calculation.dueDate).toLocaleDateString()}
             </p>
           </div>
-          <button
+          {/* <button
             onClick={handleSubmitReading}
             disabled={loading}
             style={{
@@ -284,7 +295,7 @@ const BillCalculator = () => {
             }}
           >
             {loading ? "Submitting..." : "Submit Reading"}
-          </button>
+          </button> */}
         </div>
       )}
 
