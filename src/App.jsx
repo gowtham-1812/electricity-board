@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar/Navbar2.jsx";
 import Carousel from "./Carousel/Carousel_2.jsx";
-import CurrentUpdates from "./CurrentUpdates.jsx";
-import Graphs from "./Graphs.jsx";
+import CurrentUpdates from "./Home/CurrentUpdates.jsx";
+import Graphs from "./Home/Graphs.jsx";
 import "./App.css";
 
 function App() {
