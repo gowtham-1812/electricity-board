@@ -16,11 +16,6 @@
     color: #2c3e50;
 }
 
-.brand-text {
-    margin-left: 8px;
-    font-size: 1.1rem;
-}
-
 .main-menu .nav-item {
     margin: 0 8px;
 }
@@ -104,6 +99,10 @@
 
     .dropdown > .dropdown-toggle:active {
         pointer-events: none;
+    }
+
+    .dropdown-menu:hover {
+        display: block;
     }
 }
 

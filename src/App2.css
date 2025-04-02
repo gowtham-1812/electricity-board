@@ -39,3 +39,20 @@ color: var(--dark);
     --warning: #f59e0b;
     --info: #3b82f6;
 }
+
+:root {
+    /* Primary Colors */
+    --electric-blue: #6B9FFF;      /* Main accent (buttons, highlights) */
+    --deep-navy: #1A2A4F;         /* Headers, dark backgrounds */
+    --cool-gray: #E5E9F2;         /* Light background, cards */
+    
+    /* Secondary Accents */
+    --vibrant-teal: #2ED3C4;      /* Success, energy indicators */
+    --warm-yellow: #FFD166;       /* Warnings, alerts */
+    --dark-slate: #3A4A6B;        /* Secondary text, borders */
+    
+    /* Utility Colors (Optional) */
+    --error-red: #FF6B6B;         /* Errors, destructive actions */
+    --pure-white: #FFFFFF;        /* Text on dark, highlights */
+    --pure-black: #000000;        /* Reserved for strict contrast */
+}

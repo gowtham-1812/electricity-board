@@ -1,5 +1,5 @@
 import React from "react";
-import "./Navbar1.css";
+import "./Navbar2.css";
 
 const Navbar = () => {
     const menuItems = [
@@ -42,7 +42,7 @@ const Navbar = () => {
                     <ul className="navbar-nav main-menu">
                         {menuItems.map((item, index) => (
                             <li className="nav-item dropdown" key={index}>
-                                <a href={item.link} className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                <a href={item.link} className="nav-link dropdown-toggle">
                                     {item.title}
                                 </a>
                                 
