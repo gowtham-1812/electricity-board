@@ -8,6 +8,7 @@ import LoginPage from "./LoginPage/LoginPage.jsx";
 import Footer from "./Footer/Footer.jsx";
 import NewsLetter from "./NewsLetter/NewsLetter.jsx";
 import RegisterMobileNumber from "./RegMobNo/RegisterMobileNumber.jsx";
+import RegisterComplaint from "./RegisterComplaint/RegisterComplaint.jsx";
 import "./App.css";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/login" element = { <LoginPage /> } />
                 <Route path="/newsletter" element = { <NewsLetter /> } />
                 <Route path="/register-mobile-number" element = { <RegisterMobileNumber /> } />
+                <Route path="/register-complaint" element = { <RegisterComplaint/> } />
             </Routes>
             
             <Footer />

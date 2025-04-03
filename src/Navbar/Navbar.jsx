@@ -15,7 +15,7 @@ const Navbar = () => {
             title: "Customer Support", link: "#", 
             dropdown: [
                 {name: "Register Mobile Number", link: "/register-mobile-number"}, 
-                {name: "Register Complaint", link: "#"}, 
+                {name: "Register Complaint", link: "/register-complaint"}, 
                 {name: "Newsletter", link: "/newsletter"}
             ] 
         },
