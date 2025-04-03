@@ -1,0 +1,34 @@
+.newsletter-block {
+    border: 1px solid #d3d3d3;
+    box-shadow: 2px 2px 2px lightblue;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.newsletter-content {
+    padding: 8px;
+}
+
+.newsletter-footer {
+    background-color: lightgrey;
+    padding: 8px;
+}
+
+.newsletter-file-container {
+    padding: 8px;
+    border: 1px solid grey;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.file-info {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.icon-button:focus {
+    outline: none;
+}

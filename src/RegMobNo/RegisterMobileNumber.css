@@ -1,0 +1,60 @@
+.base {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 2rem;
+}
+
+.screen {
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.header {
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.subHeader {
+    display: flex;
+    align-items: center;
+}
+
+.billDetails {
+    font-weight: 500;
+    color: #555;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+    width: 100%;
+}
+
+.formItem {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.formLabel {
+    font-weight: 500;
+    text-align: right;
+}
+
+.formSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}

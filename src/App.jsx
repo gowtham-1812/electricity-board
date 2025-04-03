@@ -5,6 +5,8 @@ import BillCalculator from "./BillCalculator/BillCalculator.jsx";
 import Home from "./Home/Home.jsx";
 import LoginPage from "./LoginPage/LoginPage.jsx";
 import Footer from "./Footer/Footer.jsx";
+import NewsLetter from "./NewsLetter/NewsLetter.jsx";
+import RegisterMobileNumber from "./RegMobNo/RegisterMobileNumber.jsx";
 import "./App.css";
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
                 <Route path="/home" element = { <Home/> } />
                 <Route path="/bill-calculations" element = { <BillCalculator/> } />
                 <Route path="/login" element = { <LoginPage /> } />
+                <Route path="/newsletter" element = { <NewsLetter /> } />
+                <Route path="/register-mobile-number" element = { <RegisterMobileNumber /> } />
             </Routes>
             
             <Footer />
