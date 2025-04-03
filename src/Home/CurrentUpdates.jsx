@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./Home.css";
+import "./Home2.css";
 
 function CurrentUpdates() {
     const [updates, setUpdates] = useState([]);
 
     useEffect(() => {
-        // Sample data (Replace this with API data later)
         setUpdates([
             { id: 1, text: "Power outage scheduled for April 5th, 10 AM - 2 PM." },
             { id: 2, text: "New tariff rates effective from May 1st." },

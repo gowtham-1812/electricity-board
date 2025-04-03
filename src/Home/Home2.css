@@ -1,0 +1,81 @@
+.updates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 30px;
+    /* background: linear-gradient(120deg, #74ebd5, #acb6e5); */
+}
+
+.updates-container,
+.graph-container {
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.updates-container:hover,
+.graph-container:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.updates-container h2,
+.graph-container h2 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f2f5;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.updates-box {
+    width: 100%;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.update-card {
+    background: white;
+    color: #2c3e50;
+    padding: 18px;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: left;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #4a90e2;
+    position: relative;
+}
+
+.update-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #2c3e50;
+}
+
+@media (max-width: 768px) {
+    .updates {
+        width: 95%;
+        gap: 20px;
+    }
+    
+    .updates-container,
+    .graph-container {
+        padding: 18px;
+    }
+    
+    .update-card {
+        padding: 15px;
+    }
+}

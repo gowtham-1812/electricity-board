@@ -3,8 +3,6 @@ import CurrentUpdates from "./CurrentUpdates.jsx";
 import Graphs from "./Graphs.jsx";
 import Carousel from "../Carousel/Carousel_2.jsx";
 
-
-
 function Home()
 {
     return (
