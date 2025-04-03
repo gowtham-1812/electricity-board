@@ -7,8 +7,8 @@ const Navbar = () => {
         {
             title: "Service Info", link: "#", 
             dropdown: [
-                {name: "Pay Your Bills", link: "#"}, 
-                {name: "Know Your Service Status", link: "#"}
+                {name: "Pay Your Bills", link: "/bill-calculation"}, 
+                {name: "Know Your Service Status", link: "/bill-status"}
             ] 
         },
         {

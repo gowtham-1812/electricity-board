@@ -46,33 +46,43 @@ const RegisterComplaint = () => {
         <div className="register-complaint-container">
             <h2>Register Complaint</h2>
             <form onSubmit={handleSubmit}>
-                <label>Date of Issue:</label>
-                <input type="date" name="date" value={formData.date} onChange={handleChange} />
-                {errors.date && <p className="error">{errors.date}</p>}
+                <div className="form-group">
+                    <label>Date of Issue:</label>
+                    <input type="date" name="date" value={formData.date} onChange={handleChange} />
+                    {errors.date && <span className="error-message">{errors.date}</span>}
+                </div>
 
-                <label>Consumer Number:</label>
-                <input type="text" name="consumerNumber" value={formData.consumerNumber} onChange={handleChange} />
-                {errors.consumerNumber && <p className="error">{errors.consumerNumber}</p>}
+                <div className="form-group">
+                    <label>Consumer Number:</label>
+                    <input type="text" name="consumerNumber" value={formData.consumerNumber} onChange={handleChange} />
+                    {errors.consumerNumber && <p className="error">{errors.consumerNumber}</p>}
+                </div>
 
-                <label for="issue-type">Select Issue Type:</label>
-                <select id="issue-type" name="issue_type" class="form-control" required>
-                <option value="" disabled selected>Choose an option</option>
-                <option value="billing">Electricity Bill Inquiry</option>
-                <option value="outage">Power Outage Report</option>
-                <option value="connection">New Connection Request</option>
-                <option value="safety">Safety Concern</option>
-                <option value="other">Other Issues</option>
-                </select>
+                <div className="form-group">
+                    <label for="issue-type">Select Issue Type:</label>
+                    <select id="issue-type" name="issue_type" class="form-control" required>
+                        <option value="" disabled selected>Choose an option</option>
+                        <option value="billing">Electricity Bill Inquiry</option>
+                        <option value="outage">Power Outage Report</option>
+                        <option value="connection">New Connection Request</option>
+                        <option value="safety">Safety Concern</option>
+                        <option value="other">Other Issues</option>
+                    </select>
+                </div>
 
-                <label>Brief Summary:</label>
-                <input type="text" name="summary" value={formData.summary} onChange={handleChange} />
-                {errors.summary && <p className="error">{errors.summary}</p>}
+                <div className="form-group">
+                    <label>Brief Summary:</label>
+                    <input type="text" name="summary" value={formData.summary} onChange={handleChange} />
+                    {errors.summary && <p className="error">{errors.summary}</p>}
+                </div>
+                
+                <div className="form-group">
+                    <label>Detailed Description:</label>
+                    <textarea name="description" value={formData.description} onChange={handleChange}></textarea>
+                    {errors.description && <p className="error">{errors.description}</p>}
+                </div>
 
-                <label>Detailed Description:</label>
-                <textarea name="description" value={formData.description} onChange={handleChange}></textarea>
-                {errors.description && <p className="error">{errors.description}</p>}
-
-                <button type="submit">Submit Complaint</button>
+                <button type="submit" className="button">Submit Complaint</button>
             </form>
         </div>
     );

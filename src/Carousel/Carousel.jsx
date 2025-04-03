@@ -14,7 +14,7 @@ function Carousel() {
                 </div>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src="/images/bill-payment.jpeg" className="bd-placeholder-img" width="100%" height="100%" alt="Bill payment" />
+                        <img src="/images/bill-payment-4.jpg" className="bd-placeholder-img" width="100%" height="100%" alt="Bill payment" />
                         <div className="container">
                             <div className="carousel-caption text-start">
                                 <h1>Pay Bills & Check Status</h1>

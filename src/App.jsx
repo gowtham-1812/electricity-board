@@ -19,7 +19,7 @@ function App() {
             <Routes>
                 <Route path="/" element = { <Home/> } />
                 <Route path="/home" element = { <Home/> } />
-                <Route path="/bill-calculations" element = { <BillCalculatorInspector /> } />
+                <Route path="/bill-calculation" element = { <BillCalculatorInspector /> } />
                 <Route path="/login" element = { <LoginPage /> } />
                 <Route path="/newsletter" element = { <NewsLetter /> } />
                 <Route path="/register-mobile-number" element = { <RegisterMobileNumber /> } />
