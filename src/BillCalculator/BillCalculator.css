@@ -1,69 +1,69 @@
-/* .App {
-  padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-} */
-
-.bill-calculator {
-  font-family: Arial, sans-serif;
-}
-
-.user-info {
-  background: #f5f5f5;
-  padding: 15px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
-.calculator-form {
-  margin-bottom: 20px;
-}
-
-.form-group {
-  margin-bottom: 10px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.form-group input {
-  padding: 8px;
-  width: 200px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
+/* General Button Styles */
 button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
+  padding: 0.6rem 1.2rem;  /* Adjusted padding */
+  border-radius: 6px;
   cursor: pointer;
-  margin-right: 10px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  width: auto;             /* Not full width */
+  min-width: 120px;        /* Ensures a decent size */
+  margin: 1rem 0;          /* Space above and below */
 }
 
-/* button:hover {
-  background-color: #45a049;
-} */
-
-.calculation-result {
-  background: #e8f5e9;
-  padding: 15px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
+/* Align buttons to the left */
+.verification-section,
+.calculation-section,
 .history-section {
-  margin-top: 30px;
+  text-align: left;  /* Align buttons inside these sections to the left */
 }
 
-.month-details {
-  background: #e3f2fd;
-  padding: 15px;
-  border-radius: 5px;
-  margin-top: 20px;
+/* Verification Button */
+.verify-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+}
+
+.verify-button:hover {
+  background-color: #2980b9;
+}
+
+.verify-button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* Submit Button */
+.submit-button {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+}
+
+.submit-button:hover {
+  background-color: #27ae60;
+}
+
+.submit-button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* Toggle History Button */
+.toggle-history-button {
+  background-color: #9b59b6;
+  color: white;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.toggle-history-button:hover {
+  background-color: #8e44ad;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  button {
+    min-width: 100px; /* Slightly smaller on mobile */
+  }
 }
