@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navbar2.css";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
     const menuItems = [
@@ -25,6 +26,7 @@ const Navbar = () => {
         }
     ];
 
+    const navigate = useNavigate();
     return (
         <nav className="navbar navbar-expand-lg navbar-light fixed-top">
             <div className="container-fluid custom-container">
@@ -60,7 +62,7 @@ const Navbar = () => {
                     </ul>
 
                     <div className="d-flex align-items-center">
-                        <a href="#" className="btn login-btn">Login</a>
+                        <a onClick={() => navigate("/login")} className="btn login-btn">Login</a>
                     </div>
                 </div>
             </div>
