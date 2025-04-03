@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./LoginPage.css";
+import Axios from "axios";
+import axios from "axios";
 
 const LoginPage = () => {
   const [userAadhaar, setUserAadhaar] = useState("");
@@ -30,9 +32,26 @@ const LoginPage = () => {
     }
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      console.log("User login attempt with:", { userAadhaar, userMobile });
-      alert("User login successful!");
+      // await new Promise((resolve) => setTimeout(resolve, 1500));
+      // console.log("User login attempt with:", { userAadhaar, userMobile });
+      // alert("User login successful!");
+
+      axios.post("http://localhost:5001/esb/login/user", {
+        aadhaar: userAadhaar,
+        mobile: userMobile
+      }).then((response) => {
+        if (response.data.verified)
+        {
+          const token = response.data.token;
+          localStorage.setItem("authToken", token);
+        }
+        else{
+          setUserError("Login failed. Please check your credentials.");
+        }
+      }).catch((error) => {
+        console.error(error);
+      })
+
     } catch (err) {
       setUserError("Login failed. Please check your credentials.");
     } finally {
@@ -58,12 +77,14 @@ const LoginPage = () => {
     }
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      console.log("Inspector login attempt with:", {
-        inspectorAadhaar,
-        inspectorMobile,
-      });
-      alert("Inspector login successful!");
+      // await new Promise((resolve) => setTimeout(resolve, 1500));
+      // console.log("Inspector login attempt with:", {
+      //   inspectorAadhaar,
+      //   inspectorMobile,
+      // });
+      // alert("Inspector login successful!");
+
+
     } catch (err) {
       setInspectorError("Login failed. Please check your credentials.");
     } finally {
