@@ -1,13 +1,13 @@
 .newsletter-container {
-    background-color: teal;
-    height: 100%;
-    overflow: auto;
-    padding: 16px;
+    background-color: #00796b;
+    min-height: 100vh;
+    padding: 2rem;
 }
 
 .newsletter-header {
-    margin-bottom: 16px;
-    text-decoration: underline;
-    letter-spacing: 2px;
+    margin-bottom: 2rem;
     color: white;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }

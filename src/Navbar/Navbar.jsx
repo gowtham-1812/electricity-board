@@ -19,15 +19,16 @@ const Navbar = () => {
                 {name: "Newsletter", link: "/newsletter"}
             ] 
         },
-        {
-            title: "Connection", link: "#", 
-            dropdown: [
-                {name: "Apply for New Connection", link: "#"}, 
-                {name: "Apply for Low Tension", link: "#"}, 
-                {name: "Pricing", link: "#"}
-            ] 
-        }
-        // FAQs
+        // {
+        //     title: "Connection", link: "#", 
+        //     dropdown: [
+        //         {name: "Apply for New Connection", link: "#"}, 
+        //         // {name: "Apply for Low Tension", link: "#"}, 
+        //         {name: "Pricing", link: "#"}
+        //     ] 
+        // }
+        { title: "Connection", link: "#" },
+        { title: "FAQs", link: "#" }
     ];
 
     const navigate = useNavigate();
@@ -39,7 +40,7 @@ const Navbar = () => {
                             <span className="navbar-toggler-icon"></span>
                         </button>
 
-                    <a href="#" className="navbar-brand">
+                    <a href="/" className="navbar-brand">
                         <img src="/vite.svg" alt="Logo" width="30" height="30" className="me-2" />
                     </a>
                 </div>

@@ -99,10 +99,6 @@
     .dropdown > .dropdown-toggle:active {
         pointer-events: none;
     }
-
-    .dropdown-menu:hover {
-        display: block;
-    }
 }
 
 @media (max-width: 991px) {
@@ -131,21 +127,10 @@
         border-radius: 0;
         box-shadow: none;
         width: 100%;
-        margin-left: 0;
     }
 
     .dropdown-item {
         padding: 10px 20px;
-    }
-
-    .navbar-toggler {
-        border: none;
-        padding: 8px;
-        background-color: transparent;
-    }
-
-    .navbar-toggler:focus {
-        box-shadow: none;
     }
 
     .login-btn {

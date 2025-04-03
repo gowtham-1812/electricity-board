@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import "./BillCalculator.css";
+import "./BillCalculator.css";
 import axios from "axios";
 import {
   LineChart,
@@ -188,6 +188,7 @@ const BillCalculator = () => {
           />
         </div>
         <button
+          className="button"
           onClick={fetchAndCalculate}
           disabled={!consumerNo || !mobile || loading}
           style={{
@@ -318,6 +319,7 @@ const BillCalculator = () => {
           >
             <h3>Consumption History</h3>
             <button
+              className="button"
               onClick={() => setShowHistory(!showHistory)}
               style={{
                 padding: "8px 15px",

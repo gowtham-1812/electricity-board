@@ -18,9 +18,14 @@ const NewsLetter = () => {
     return (
         <Box className="newsletter-container">
             <Box className="newsletter-header">
-                <Typography variant="h6">NEWSLETTER - THE FACTS</Typography>
+                <Typography variant="h4" sx={{ fontWeight: 600, letterSpacing: 1 }}>
+                    NEWSLETTER - THE FACTS
+                </Typography>
+                <Typography variant="subtitle1" sx={{ mt: 1, opacity: 0.9 }}>
+                    Latest updates and announcements
+                </Typography>
             </Box>
-            <Grid container spacing={2}>
+            <Grid container spacing={3} justifyContent="center">
                 {NewsLetterItems.map((item, index) => (
                     <NewsLetterBlock key={index} item={item} />
                 ))}
