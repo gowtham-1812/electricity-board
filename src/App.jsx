@@ -1,12 +1,11 @@
 import React from "react";
-import Navbar from "./Navbar/Navbar2.jsx";
-
-import "./App.css";
+import Navbar from "./Navbar/Navbar.jsx";
 import {Route, Routes} from "react-router-dom";
 import BillCalculator from "./BillCalculator/BillCalculator.jsx";
 import Home from "./Home/Home.jsx";
-import LoginPage from "./LoginPage/LoginPage.jsx"
-import Footer from "./Footer/Footer2.jsx";
+import LoginPage from "./LoginPage/LoginPage.jsx";
+import Footer from "./Footer/Footer.jsx";
+import "./App.css";
 
 function App() {
     return(

@@ -1,72 +1,81 @@
-/* Current Updates Section */
 .updates {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 30px;
+    /* background: linear-gradient(120deg, #74ebd5, #acb6e5); */
 }
 
-.updates-container {
-    width: 40vw;  /* 40% of the viewport width */
-    height: calc(40vw * 9 / 16);  /* 16:9 aspect ratio */
-    max-height: 80vh;  /* Maximum height limit */
+.updates-container,
+.graph-container {
+    width: 100%;
     background: white;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    text-align: center;
-    /*  */
-    margin: 10px;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.updates-container:hover,
+.graph-container:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.updates-container h2,
+.graph-container h2 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f2f5;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .updates-box {
-    width: 90%;
-    height: 80%;
-    overflow-y: auto;
+    width: 100%;
+    padding-right: 10px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .update-card {
-    background: #6b9fff; /* hsl(219, 100%, 71%) */
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    text-align: center;
-    transition: transform 0.2s ease-in-out;
+    background: white;
+    color: #2c3e50;
+    padding: 18px;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: left;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #4a90e2;
+    position: relative;
 }
 
 .update-card:hover {
-    transform: scale(1.05);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #2c3e50;
 }
 
-/* Graphs Section */
-.graph-container {
-    width: 40vw; /* 50% of viewport width */
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    /* margin-left: 29.7%; */
-    margin: 10px;
-}
-
-.graph-search {
-    width: 90%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
+@media (max-width: 768px) {
+    .updates {
+        width: 95%;
+        gap: 20px;
+    }
+    
+    .updates-container,
+    .graph-container {
+        padding: 18px;
+    }
+    
+    .update-card {
+        padding: 15px;
+    }
 }

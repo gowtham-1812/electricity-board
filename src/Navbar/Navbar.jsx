@@ -1,12 +1,15 @@
 import React from "react";
 import "./Navbar.css";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
     const menuItems = [
-        // { title: "", link: "", dropdown: [{name: "", link: ""}]}
         {
             title: "Service Info", link: "#", 
-            dropdown: [{name: "Know Your Sector", link: "#"}, {name: "Know Your Service Status", link: "#"}] 
+            dropdown: [
+                {name: "Pay Your Bills", link: "#"}, 
+                {name: "Know Your Service Status", link: "#"}
+            ] 
         },
         {
             title: "Customer Support", link: "#", 
@@ -17,38 +20,32 @@ const Navbar = () => {
             ] 
         },
         {
-            title: "New Connection", link: "#", 
+            title: "Connection", link: "#", 
             dropdown: [
-                {name: "Apply Online", link: "#"}, 
+                {name: "Apply for New Connection", link: "#"}, 
                 {name: "Apply for Low Tension", link: "#"}, 
                 {name: "Pricing", link: "#"}
             ] 
-        },
-        {
-            title: "Help", link: "#", 
-            dropdown: [
-                {name: "Power House Visit", link: "#"}, 
-                {name: "FAQs", link: "#"}
-            ] 
-        },
+        }
+        // FAQs
     ];
 
+    const navigate = useNavigate();
     return (
-        <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-light">
-            <div className="container">
-
-                <div className="d-flex align-items-center gap-2">
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
+        <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+            <div className="container-fluid custom-container">
+                <div className="d-flex align-items-center gap-3">
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
 
                     <a href="#" className="navbar-brand">
-                        <img src="/vite.svg" alt="Logo" width="30" height="30" />
+                        <img src="/vite.svg" alt="Logo" width="30" height="30" className="me-2" />
                     </a>
                 </div>
 
-                <div className="collapse navbar-collapse justify-content-start" id="navbarNav">
-                    <ul className="navbar-nav">
+                <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <ul className="navbar-nav main-menu">
                         {menuItems.map((item, index) => (
                             <li className="nav-item dropdown" key={index}>
                                 <a href={item.link} className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
@@ -67,11 +64,11 @@ const Navbar = () => {
                             </li>
                         ))}
                     </ul>
-                </div>
 
-                <form className="d-flex d-none d-md-block" role="search">
-                    <input type="search" className="form-control me-2" placeholder="Search..." aria-label="Search" />
-                </form>
+                    <div className="d-flex align-items-center">
+                        <a onClick={() => navigate("/login")} className="btn login-btn">Login</a>
+                    </div>
+                </div>
             </div>
         </nav>
     );

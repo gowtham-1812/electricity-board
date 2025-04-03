@@ -1,51 +1,60 @@
 import React from "react";
 import "./Carousel.css";
+import { useNavigate } from "react-router-dom";
 
 function Carousel() {
-    
+    const navigate = useNavigate();
     return(
         <div>
             <div id="myCarousel" className="carousel slide mb-6" data-bs-ride="carousel">
                 <div className="carousel-indicators">
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" className="" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" className=""></button>
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" className="active" aria-current="true"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" className="active" aria-label="Bill Payment" aria-current="true"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="New Connection"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Customer Support"></button>
                 </div>
                 <div className="carousel-inner">
-                <div className="carousel-item">
-                    <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
-                    <div className="container">
-                    <div className="carousel-caption text-start">
-                        <h1>Example headline.</h1>
-                        <p className="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
-                        <p><a className="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                    <div className="carousel-item active">
+                        <img src="/images/bill-payment.jpeg" className="bd-placeholder-img" width="100%" height="100%" alt="Bill payment" />
+                        <div className="container">
+                            <div className="carousel-caption text-start">
+                                <h1>Pay Bills & Check Status</h1>
+                                <p>Instant online payments and real-time bill status updates</p>
+                                <div className="d-flex gap-2">
+                                    <a className="btn btn-lg btn-primary" onClick={() => navigate("/bill-calculations")}>Pay Now</a>
+                                    <a className="btn btn-lg btn-outline-light" href="/bill-status">Check Status</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <div className="carousel-item">
+                        <img src="/images/new-conn-house.avif" className="bd-placeholder-img" width="100%" height="100%" alt="New connection" />
+                        <div className="container">
+                            <div className="carousel-caption">
+                                <h1>New Electricity Connection</h1>
+                                <p>Fast and hassle-free new connections with transparent pricing</p>
+                                <a className="btn btn-lg btn-primary" href="/new-connection">Apply Now</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div className="carousel-item">
-                    <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
-                    <div className="container">
-                    <div className="carousel-caption">
-                        <h1>Another example headline.</h1>
-                        <p>Some representative placeholder content for the second slide of the carousel.</p>
-                        <p><a className="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                    
+                    <div className="carousel-item">
+                        <img src="/images/customer-supp-4.webp" className="bd-placeholder-img" width="100%" height="100%" alt="Customer support" />
+                        <div className="container">
+                            <div className="carousel-caption text-end">
+                                <h1>24/7 Customer Support</h1>
+                                <p>We're here to help with all your electricity needs</p>
+                                <div className="d-flex gap-2 justify-content-end">
+                                    <a className="btn btn-lg btn-primary" href="/contact">Contact Us</a>
+                                    <a className="btn btn-lg btn-outline-light" href="/faq">FAQs</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                </div>
-                <div className="carousel-item active">
-                    <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
-                    <div className="container">
-                    <div className="carousel-caption text-end">
-                        <h1>One more for good measure.</h1>
-                        <p>Some representative placeholder content for the third slide of this carousel.</p>
-                        <p><a className="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-                    </div>
-                    </div>
-                </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Previous</span>
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
                 </button>
                 <button className="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
                     <span className="carousel-control-next-icon" aria-hidden="true"></span>

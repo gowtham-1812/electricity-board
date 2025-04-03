@@ -1,7 +1,7 @@
 import React from "react";
 import CurrentUpdates from "./CurrentUpdates.jsx";
 import Graphs from "./Graphs.jsx";
-import Carousel from "../Carousel/Carousel_2.jsx";
+import Carousel from "../Carousel/Carousel.jsx";
 
 function Home()
 {

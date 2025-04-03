@@ -1,22 +1,62 @@
 import React from "react";
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 import "./Footer.css";
 
 function Footer() {
     return (
-        <div>
-            <div className="container">
-                <footer className="pt-3 my-4">
-                    <ul className="nav justify-content-center border-bottom pb-3 mb-3">
-                        <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">Home</a></li>
-                        <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">Quick Pay</a></li>
-                        <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">Pricing</a></li>
-                        <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">FAQs</a></li>
-                        <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">Contact US</a></li>
-                    </ul>
-                    <p className="text-center text-body-secondary">© 2024 Company, Inc</p>
-                </footer>
+        <footer className="footer">
+            <div className="footer-container">
+                <div className="footer-grid">
+                    <div className="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div className="footer-column">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Bill Payments</a></li>
+                            <li><a href="#">New Connections</a></li>
+                            <li><a href="#">Complaints</a></li>
+                            <li><a href="#">Service Status</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div className="footer-column">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li>123 Energy Street</li>
+                            <li>Power City, PC 12345</li>
+                            <li><strong>Phone:</strong> +91 12345 67890</li>
+                            <li>
+                                <strong>Email:</strong> 
+                                <a href="mailto:info@electriccompany.com"> info@electriccompany.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div className="footer-bottom">
+                    <p>&copy; {new Date().getFullYear()} Electricity State Board. All Rights Reserved.</p>
+                    <div className="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                    <div className="social-icons">
+                        <a href="#"><FaFacebook /></a>
+                        <a href="#"><FaTwitter /></a>
+                        <a href="#"><FaLinkedin /></a>
+                        <a href="#"><FaInstagram /></a>
+                    </div>
+                </div>
             </div>
-        </div>
+        </footer>
     );
 }
 
