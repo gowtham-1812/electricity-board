@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./BillCalculator.css"
+// import "./BillCalculator.css";
 import axios from "axios";
 import {
   LineChart,

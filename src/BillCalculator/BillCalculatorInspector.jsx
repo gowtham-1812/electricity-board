@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Inspector.css"
+import "./BillCalculatorInspector.css";
 
 import {
   LineChart,

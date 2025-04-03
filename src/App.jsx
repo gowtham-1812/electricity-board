@@ -6,7 +6,7 @@ import {Route, Routes} from "react-router-dom";
 import BillCalculator from "./BillCalculator/BillCalculator.jsx";
 import Home from "./Home/Home.jsx";
 import LoginPage from "./LoginPage/LoginPage.jsx"
-import Footer from "./Footer/Footer.jsx";
+import Footer from "./Footer/Footer2.jsx";
 
 function App() {
     return(
