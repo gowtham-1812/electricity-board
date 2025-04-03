@@ -10,24 +10,24 @@ function Footer() {
                     <div className="footer-column">
                         <h3>Quick Links</h3>
                         <ul>
-                            <li><a href="#">Home</a></li>
+                            <li><a href="/">Home</a></li>
                             <li><a href="#">About Us</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#service">Services</a></li>
+                            <li><a href="#contact-section">Contact</a></li>
                         </ul>
                     </div>
                     
-                    <div className="footer-column">
+                    <div className="footer-column" id="service">
                         <h3>Services</h3>
                         <ul>
-                            <li><a href="#">Bill Payments</a></li>
+                            <li><a href="/bill-calculation">Bill Payments</a></li>
                             <li><a href="#">New Connections</a></li>
-                            <li><a href="#">Complaints</a></li>
+                            <li><a href="/register-complaint">Complaints</a></li>
                             <li><a href="#">Service Status</a></li>
                         </ul>
                     </div>
                     
-                    <div className="footer-column">
+                    <div className="footer-column" id="contact-section">
                         <h3>Contact Us</h3>
                         <ul>
                             <li>123 Energy Street</li>
