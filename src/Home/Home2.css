@@ -1,4 +1,3 @@
-/* Home Container */
 .updates {
     display: flex;
     flex-direction: column;
@@ -7,10 +6,11 @@
     max-width: 1200px;
     margin: 30px auto;
     gap: 30px;
+    /* background: linear-gradient(120deg, #74ebd5, #acb6e5); */
 }
 
-/* Current Updates Section */
-.updates-container {
+.updates-container,
+.graph-container {
     width: 100%;
     background: white;
     border-radius: 12px;
@@ -20,12 +20,14 @@
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.updates-container:hover {
+.updates-container:hover,
+.graph-container:hover {
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
     transform: translateY(-2px);
 }
 
-.updates-container h2 {
+.updates-container h2,
+.graph-container h2 {
     color: #2c3e50;
     font-size: 1.5rem;
     margin-bottom: 20px;
@@ -37,8 +39,6 @@
 
 .updates-box {
     width: 100%;
-    max-height: 300px;
-    overflow-y: auto;
     padding-right: 10px;
     display: flex;
     flex-direction: column;
@@ -56,7 +56,6 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     border-left: 4px solid #4a90e2;
     position: relative;
-    overflow: hidden;
 }
 
 .update-card:hover {
@@ -65,67 +64,6 @@
     border-left: 4px solid #2c3e50;
 }
 
-.update-card::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 4px;
-    background: linear-gradient(to bottom, #4a90e2, #6b9fff);
-    transition: all 0.3s ease;
-}
-
-.update-card:hover::before {
-    width: 6px;
-}
-
-/* Graphs Section */
-.graph-container {
-    width: 100%;
-    background: white;
-    border-radius: 12px;
-    padding: 25px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.graph-container:hover {
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
-    transform: translateY(-2px);
-}
-
-.graph-container h2 {
-    color: #2c3e50;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #f0f2f5;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-}
-
-/* Custom scrollbar */
-.updates-box::-webkit-scrollbar {
-    width: 6px;
-}
-
-.updates-box::-webkit-scrollbar-track {
-    background: #f8f9fa;
-    border-radius: 10px;
-}
-
-.updates-box::-webkit-scrollbar-thumb {
-    background: #d1d5db;
-    border-radius: 10px;
-}
-
-.updates-box::-webkit-scrollbar-thumb:hover {
-    background: #9ca3af;
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .updates {
         width: 95%;

@@ -6,6 +6,7 @@ import {Route, Routes} from "react-router-dom";
 import BillCalculator from "./BillCalculator/BillCalculator.jsx";
 import Home from "./Home/Home.jsx";
 import LoginPage from "./LoginPage/LoginPage.jsx"
+import Footer from "./Footer/Footer.jsx";
 
 function App() {
     return(
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/login" element = { <LoginPage /> } />
             </Routes>
             
+            <Footer />
         </div>
     );
 }

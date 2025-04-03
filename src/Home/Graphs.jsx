@@ -36,10 +36,6 @@ function Graphs() {
         <div className="graph-container">
             <h2>Electricity Usage Over the Years</h2>
 
-            {/* Search Input */}
-           
-
-            {/* Responsive Graph */}
             <ResponsiveContainer width="95%" height={350}>
                 <AreaChart data={filteredData}>
                     <defs>

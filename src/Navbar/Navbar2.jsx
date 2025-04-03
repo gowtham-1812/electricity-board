@@ -6,7 +6,10 @@ const Navbar = () => {
     const menuItems = [
         {
             title: "Service Info", link: "#", 
-            dropdown: [{name: "Know Your Sector", link: "#"}, {name: "Know Your Service Status", link: "#"}] 
+            dropdown: [
+                {name: "Pay Your Bills", link: "#"}, 
+                {name: "Know Your Service Status", link: "#"}
+            ] 
         },
         {
             title: "Customer Support", link: "#", 
@@ -17,13 +20,14 @@ const Navbar = () => {
             ] 
         },
         {
-            title: "New Connection", link: "#", 
+            title: "Connection", link: "#", 
             dropdown: [
-                {name: "Apply Online", link: "#"}, 
+                {name: "Apply for New Connection", link: "#"}, 
                 {name: "Apply for Low Tension", link: "#"}, 
                 {name: "Pricing", link: "#"}
             ] 
         }
+        // FAQs
     ];
 
     const navigate = useNavigate();
@@ -44,7 +48,7 @@ const Navbar = () => {
                     <ul className="navbar-nav main-menu">
                         {menuItems.map((item, index) => (
                             <li className="nav-item dropdown" key={index}>
-                                <a href={item.link} className="nav-link dropdown-toggle">
+                                <a href={item.link} className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                                     {item.title}
                                 </a>
                                 
