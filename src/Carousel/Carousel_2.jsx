@@ -1,7 +1,9 @@
 import React from "react";
 import "./Carousel.css";
+import { useNavigate } from "react-router-dom";
 
 function Carousel() {
+    const navigate = useNavigate();
     return(
         <div>
             <div id="myCarousel" className="carousel slide mb-6" data-bs-ride="carousel">
@@ -18,7 +20,7 @@ function Carousel() {
                                 <h1>Pay Bills & Check Status</h1>
                                 <p>Instant online payments and real-time bill status updates</p>
                                 <div className="d-flex gap-2">
-                                    <a className="btn btn-lg btn-primary" href="/pay-bills">Pay Now</a>
+                                    <a className="btn btn-lg btn-primary" onClick={() => navigate("/bill-calculations")}>Pay Now</a>
                                     <a className="btn btn-lg btn-outline-light" href="/bill-status">Check Status</a>
                                 </div>
                             </div>
