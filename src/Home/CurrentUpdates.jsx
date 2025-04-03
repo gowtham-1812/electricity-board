@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Home.css";
+import "./Home2.css";
 
 function CurrentUpdates() {
     const [updates, setUpdates] = useState([]);

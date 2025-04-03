@@ -11,7 +11,7 @@ import {
     Area,
     AreaChart
 } from "recharts";
-import "./Home.css";
+import "./Home2.css";
 
 const initialData = [
     { year: "2015", value: 120 },
