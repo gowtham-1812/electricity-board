@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+    const [userType, setUserType] = useState(null);
+
+    useEffect(() => {
+        const storedUserType = localStorage.getItem("userType");
+        setUserType(storedUserType);
+    })
+
+    const handleLogout = () => {
+        localStorage.removeItem("userType");
+        localStorage.removeItem("authToken");
+        setUserType(null);
+        navigate("login");
+    }
     const menuItems = [
         {
             title: "Service Info", link: "#", 
@@ -67,7 +80,12 @@ const Navbar = () => {
                     </ul>
 
                     <div className="d-flex align-items-center">
-                        <a onClick={() => navigate("/login")} className="btn login-btn">Login</a>
+                    {(userType) ? <span className="nav-bar-button-side-text">{userType}</span> : <></>}
+                    {userType ? (
+                            <button onClick={handleLogout} className="btn logout-btn">Logout</button>
+                        ) : (
+                            <a onClick={() => navigate("/login")} className="btn login-btn">Login</a>
+                        )}
                     </div>
                 </div>
             </div>

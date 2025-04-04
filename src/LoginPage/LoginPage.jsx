@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./LoginPage.css";
 import Axios from "axios";
 import axios from "axios";
+import "react-toastify/dist/ReactToastify.css";
+import { toast, ToastContainer } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [userAadhaar, setUserAadhaar] = useState("");
@@ -13,6 +16,15 @@ const LoginPage = () => {
   const [userError, setUserError] = useState("");
   const [inspectorError, setInspectorError] = useState("");
   const [activeForm, setActiveForm] = useState("user"); // 'user' or 'inspector'
+  const [notification, setNotification] = useState({message: "", type: ""});
+  
+  const showNotification = (message, type) => {
+    setNotification({message, type});
+    if (type == "success") toast.success(message);
+    if (type == "error") toast.error(message);
+  }
+
+  const navigate = useNavigate();
 
   const handleUserLogin = async (e) => {
     e.preventDefault();
@@ -44,9 +56,14 @@ const LoginPage = () => {
         {
           const token = response.data.token;
           localStorage.setItem("authToken", token);
+          localStorage.setItem("userType", "user"); 
+          showNotification("User login successful!", "success");
+            navigate("/home");
+
         }
         else{
           setUserError("Login failed. Please check your credentials.");
+          showNotification("Login failed. Please check your credentials.", "error");
         }
       }).catch((error) => {
         console.error(error);
@@ -54,6 +71,7 @@ const LoginPage = () => {
 
     } catch (err) {
       setUserError("Login failed. Please check your credentials.");
+      showNotification("An error occurred during login.", "error");
     } finally {
       setUserLoading(false);
     }
@@ -77,23 +95,39 @@ const LoginPage = () => {
     }
 
     try {
-      // await new Promise((resolve) => setTimeout(resolve, 1500));
-      // console.log("Inspector login attempt with:", {
-      //   inspectorAadhaar,
-      //   inspectorMobile,
-      // });
-      // alert("Inspector login successful!");
+      const response = await axios.post("http://localhost:5001/esb/login/inspector", {
+        aadhaar: parseInt(inspectorAadhaar),
+        mobile: inspectorMobile,
+      });
 
-
-    } catch (err) {
+      if (response.data.verified) {
+        const token = response.data.token;
+        localStorage.setItem("authToken", token);
+        localStorage.setItem("userType", "inspector"); // Set user type in localStorage
+        showNotification("Inspector login successful!", "success");
+        navigate("/home");
+      } else {
+        setInspectorError("Login failed. Please check your credentials.");
+        showNotification("Login failed. Please check your credentials.", "error");
+      }
+    } catch (error) {
+      console.error(error);
       setInspectorError("Login failed. Please check your credentials.");
+      showNotification("An error occurred during login.", "error");
     } finally {
       setInspectorLoading(false);
     }
+  
   };
 
   return (
     <div className="login-container">
+      {/* <Notification
+        message={notification.message}
+        type={notification.type}
+        onClose={() => setNotification({ message: "", type: "" })}
+      /> */}
+      
       <div className="login-header">
         <h1>Authentication Portal</h1>
         <p>Please select your role and enter your credentials</p>

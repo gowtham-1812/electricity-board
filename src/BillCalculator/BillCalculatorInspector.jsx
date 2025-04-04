@@ -14,38 +14,38 @@ import {
 
 const InspectorBillCalculator = () => {
   // Mock user data
-  const mockUsers = [
-    {
-      id: 1,
-      consumerNo: "CON123456",
-      name: "John Doe",
-      mobile: "9876543210",
-      address: "123 Main St, Cityville",
-      meterNumber: "MTR789012",
-      previousReading: 1250,
-    },
-    {
-      id: 2,
-      consumerNo: "CON654321",
-      name: "Jane Smith",
-      mobile: "8765432109",
-      address: "456 Oak Ave, Townsville",
-      meterNumber: "MTR210987",
-      previousReading: 1875,
-    },
-  ];
-  const mockHistory = {
-    CON123456: [
-      { readingDate: "2023-01-15", unitsConsumed: 120, amount: 420.0 },
-      { readingDate: "2023-02-15", unitsConsumed: 135, amount: 472.5 },
-      { readingDate: "2023-03-15", unitsConsumed: 110, amount: 385.0 },
-    ],
-    CON654321: [
-      { readingDate: "2023-01-15", unitsConsumed: 150, amount: 525.0 },
-      { readingDate: "2023-02-15", unitsConsumed: 175, amount: 612.5 },
-      { readingDate: "2023-03-15", unitsConsumed: 160, amount: 560.0 },
-    ],
-  };
+  // const mockUsers = [
+  //   {
+  //     id: 1,
+  //     consumerNo: "CON123456",
+  //     name: "John Doe",
+  //     mobile: "9876543210",
+  //     address: "123 Main St, Cityville",
+  //     meterNumber: "MTR789012",
+  //     previousReading: 1250,
+  //   },
+  //   {
+  //     id: 2,
+  //     consumerNo: "CON654321",
+  //     name: "Jane Smith",
+  //     mobile: "8765432109",
+  //     address: "456 Oak Ave, Townsville",
+  //     meterNumber: "MTR210987",
+  //     previousReading: 1875,
+  //   },
+  // ];
+  // const mockHistory = {
+  //   CON123456: [
+  //     { readingDate: "2023-01-15", unitsConsumed: 120, amount: 420.0 },
+  //     { readingDate: "2023-02-15", unitsConsumed: 135, amount: 472.5 },
+  //     { readingDate: "2023-03-15", unitsConsumed: 110, amount: 385.0 },
+  //   ],
+  //   CON654321: [
+  //     { readingDate: "2023-01-15", unitsConsumed: 150, amount: 525.0 },
+  //     { readingDate: "2023-02-15", unitsConsumed: 175, amount: 612.5 },
+  //     { readingDate: "2023-03-15", unitsConsumed: 160, amount: 560.0 },
+  //   ],
+  // };
 
   const [consumerNo, setConsumerNo] = useState("");
   const [user, setUser] = useState(null);
@@ -62,11 +62,11 @@ const InspectorBillCalculator = () => {
       setLoading(true);
       setError(null);
 
-      // Simulated API delay
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      // // Simulated API delay
+      // await new Promise((resolve) => setTimeout(resolve, 500));
 
-      // Mock verification
-      const foundUser = mockUsers.find((u) => u.consumerNo === consumerNo);
+      // // Mock verification
+      // const foundUser = mockUsers.find((u) => u.consumerNo === consumerNo);
 
       if (!foundUser) {
         throw new Error("Consumer not found.");

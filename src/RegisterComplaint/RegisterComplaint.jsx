@@ -27,20 +27,47 @@ const RegisterComplaint = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (validateForm()) {
-            alert("Complaint Submitted Successfully!");
-            setFormData({
-                date: "",
-                name: "",
-                consumerNumber: "",
-                contactInfo: "",
-                summary: "",
-                description: ""
-            });
+            const complaintData = {
+                consumerNo: formData.consumerNumber,
+                title: formData.summary,
+                description: formData.description
+                // No need to send date, backend sets it
+            };
+    
+            try {
+                const response = await fetch("http://localhost:5001/esb/add-complaint", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(complaintData)
+                });
+    
+                const result = await response.json();
+    
+                if (response.ok) {
+                    alert(`Complaint registered successfully! Complaint ID: ${result.complaintId}`);
+                    setFormData({
+                        date: "",
+                        consumerNumber: "",
+                        summary: "",
+                        description: ""
+                    });
+                    setErrors({});
+                } else {
+                    alert(`Error: ${result.error}`);
+                }
+    
+            } catch (err) {
+                console.error("Submission error:", err);
+                alert("An error occurred while submitting the complaint.");
+            }
         }
     };
+    
 
     return (
         <div className="register-complaint-container">
@@ -60,7 +87,7 @@ const RegisterComplaint = () => {
 
                 <div className="form-group">
                     <label for="issue-type">Select Issue Type:</label>
-                    <select id="issue-type" name="issue_type" class="form-control" required>
+                    <select id="issue-type" name="issue_type" className="form-control" required>
                         <option value="" disabled selected>Choose an option</option>
                         <option value="billing">Electricity Bill Inquiry</option>
                         <option value="outage">Power Outage Report</option>
