@@ -20,7 +20,7 @@ function Carousel() {
                                 <h1>Pay Bills & Check Status</h1>
                                 <p>Instant online payments and real-time bill status updates</p>
                                 <div className="d-flex gap-2">
-                                    <a className="btn btn-lg btn-primary" onClick={() => navigate("/bill-calculations")}>Pay Now</a>
+                                    <a className="btn btn-lg btn-primary" onClick={() => navigate("/bill-calculation")}>Pay Now</a>
                                     <a className="btn btn-lg btn-outline-light" href="/bill-status">Check Status</a>
                                 </div>
                             </div>

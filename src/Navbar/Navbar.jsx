@@ -32,15 +32,15 @@ const Navbar = () => {
                 {name: "Newsletter", link: "/newsletter"}
             ] 
         },
-        // {
-        //     title: "Connection", link: "#", 
-        //     dropdown: [
-        //         {name: "Apply for New Connection", link: "#"}, 
-        //         // {name: "Apply for Low Tension", link: "#"}, 
-        //         {name: "Pricing", link: "#"}
-        //     ] 
-        // }
-        { title: "Connection", link: "#" },
+        {
+            title: "Connection", link: "#", 
+            dropdown: [
+                {name: "Apply for New Connection", link: "/connections"}, 
+                // {name: "Apply for Low Tension", link: "#"}, 
+                {name: "Pricing", link: "#"}
+            ] 
+        },
+        // { title: "Connection", link: "#" },
         { title: "FAQs", link: "#" }
     ];
 

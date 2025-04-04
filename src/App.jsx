@@ -12,6 +12,7 @@ import RegisterComplaint from "./RegisterComplaint/RegisterComplaint.jsx";
 import "./App.css";
 import { ToastContainer } from "react-toastify";
 import ConsumerBillView from "./BillCalculator/ConsumerBillView.jsx";
+import ConnectionsPage from "./Connection/ConnectionsPage.jsx";
 
 function App() {
     return(
@@ -26,6 +27,7 @@ function App() {
                 <Route path="/newsletter" element = { <NewsLetter /> } />
                 <Route path="/register-mobile-number" element = { <RegisterMobileNumber /> } />
                 <Route path="/register-complaint" element = { <RegisterComplaint/> } />
+                <Route path="/connections" element = { <ConnectionsPage/> } />
             </Routes>
             
             <Footer />
