@@ -32,10 +32,9 @@ const ConnectionsPage = () => {
     }
   };
 
-  // Delete a connection
   const deleteConnection = async (connid) => {
     try {
-      await axios.delete(`http://localhost:5001/connections/${connid}`);
+      await axios.put(`http://localhost:5001/connections/${connid}`);
       setConnections(connections.filter((conn) => conn.connid !== connid));
     } catch (err) {
       console.error(err);

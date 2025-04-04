@@ -21,7 +21,7 @@ const Navbar = () => {
             title: "Service Info", link: "#", 
             dropdown: [
                 {name: "Pay Your Bills", link: "/bill-calculation"}, 
-                {name: "Know Your Service Status", link: "/bill-status"}
+                {name: "Know Your Service Status", link: "/service-status"}
             ] 
         },
         {

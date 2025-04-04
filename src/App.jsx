@@ -28,6 +28,7 @@ function App() {
                 <Route path="/register-mobile-number" element = { <RegisterMobileNumber /> } />
                 <Route path="/register-complaint" element = { <RegisterComplaint/> } />
                 <Route path="/connections" element = { <ConnectionsPage/> } />
+                <Route path="/service-status" element = { <ConnectionsPage/> } />
             </Routes>
             
             <Footer />
