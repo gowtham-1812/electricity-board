@@ -80,7 +80,11 @@ const Navbar = () => {
                     </ul>
 
                     <div className="d-flex align-items-center">
-                    {(userType) ? <span className="nav-bar-button-side-text">{userType}</span> : <></>}
+                    {(userType) ? (
+                        <span className={`nav-bar-button-side-text ${userType === "inspector" ? "inspector" : ""}`}>
+                            {userType.toString().toUpperCase()}
+                        </span>
+                    ) : null}
                     {userType ? (
                             <button onClick={handleLogout} className="btn logout-btn">Logout</button>
                         ) : (

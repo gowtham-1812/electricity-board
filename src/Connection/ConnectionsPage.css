@@ -1,64 +1,128 @@
 .connections-page {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
     font-family: Arial, sans-serif;
-  }
-  
-  .consumer-id-input {
-    margin-bottom: 20px;
-  }
-  
-  .consumer-id-input input {
-    padding: 10px;
+}
+
+.connections-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.connections-card h1 {
+    text-align: center;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.consumer-id-input {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.consumer-id-input input {
+    padding: 12px 15px;
     font-size: 16px;
-    margin-right: 10px;
-  }
-  
-  .consumer-id-input button {
-    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    min-width: 300px;
+    flex-grow: 1;
+}
+
+.consumer-id-input button {
+    padding: 12px 25px;
     font-size: 16px;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .consumer-id-input button:disabled {
+    transition: background-color 0.2s;
+}
+
+.consumer-id-input button:hover:not(:disabled) {
+    background-color: #0069d9;
+}
+
+.consumer-id-input button:disabled {
     background-color: #6c757d;
     cursor: not-allowed;
-  }
-  
-  .error {
-    color: red;
-    margin-bottom: 20px;
-  }
-  
-  .connections-table {
+}
+
+.error {
+    color: #dc3545;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #f8d7da;
+    border-radius: 5px;
+    border-left: 4px solid #dc3545;
+}
+
+.connections-table-container {
+    overflow-x: auto;
+    margin-top: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.connections-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  .connections-table th,
-  .connections-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
+    min-width: 800px;
+}
+
+.connections-table th,
+.connections-table td {
+    border: 1px solid #e0e0e0;
+    padding: 12px 15px;
     text-align: left;
-  }
-  
-  .connections-table th {
-    background-color: #f4f4f4;
-  }
-  
-  .delete-btn {
+}
+
+.connections-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #495057;
+}
+
+.connections-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.connections-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.delete-btn {
     background-color: #dc3545;
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 8px 15px;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .delete-btn:hover {
+    transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
     background-color: #c82333;
-  }
+}
+
+.no-connections {
+    text-align: center;
+    padding: 30px;
+    color: #6c757d;
+    font-size: 18px;
+}

@@ -153,17 +153,21 @@
 }
 
 .nav-bar-button-side-text {
-    background-color: #007bff; /* Match the button's background color */
-    color: white; /* Match the button's text color */
-    padding: 5px 10px; /* Add padding for consistency */
-    border-radius: 5px; /* Add rounded corners */
-    margin-right: 10px; /* Add spacing between the label and the button */
-    font-size: 14px; /* Match the font size of the button */
-    display: inline-block; /* Ensure it behaves like a button */
-    /* padding-right: 5%; */
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+    display: inline-block;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
   }
   
   .nav-bar-button-side-text:hover {
-    background-color: #0056b3; /* Add a hover effect similar to the button */
-    cursor: default; /* Prevent pointer cursor on hover */
+    cursor: default;
+  }
+
+  .inspector {
+    background-color: #f39c12;
   }

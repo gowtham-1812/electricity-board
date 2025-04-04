@@ -1,22 +1,36 @@
 .newsletter-block {
-    border: 1px solid #d3d3d3;
-    box-shadow: 2px 2px 2px lightblue;
+    border: 1px solid #b0bec5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     background-color: white;
-    border-radius: 4px;
+    border-radius: 6px;
+    transition: transform 0.2s;
+}
+
+.newsletter-block:hover {
+    transform: translateY(-2px); /* Lift on hover */
 }
 
 .newsletter-content {
-    padding: 8px;
+    padding: 12px;
+}
+
+.newsletter-content > * {
+    color: #37474f; /* Dark gray (was default black) */
+}
+
+.file-info > .MuiTypography-caption {
+    color: #546e7a; /* Medium gray for file text */
 }
 
 .newsletter-footer {
-    background-color: lightgrey;
+    background-color: #f5f7fa;
     padding: 8px;
+    border-top: 1px solid #e0e0e0;
 }
 
 .newsletter-file-container {
     padding: 8px;
-    border: 1px solid grey;
+    border: 1px solid #cfd8dc;
     background-color: white;
     display: flex;
     justify-content: space-between;

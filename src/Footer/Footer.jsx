@@ -21,9 +21,9 @@ function Footer() {
                         <h3>Services</h3>
                         <ul>
                             <li><a href="/bill-calculation">Bill Payments</a></li>
-                            <li><a href="#">New Connections</a></li>
+                            <li><a href="/connections">New Connections</a></li>
                             <li><a href="/register-complaint">Complaints</a></li>
-                            <li><a href="#">Service Status</a></li>
+                            <li><a href="/service-status">Service Status</a></li>
                         </ul>
                     </div>
                     

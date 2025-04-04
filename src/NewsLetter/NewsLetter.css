@@ -1,13 +1,13 @@
 .newsletter-container {
-    background-color: #00796b;
+    background-color: #e3eaf2;
     min-height: 100vh;
     padding: 2rem;
 }
 
 .newsletter-header {
-    margin-bottom: 2rem;
-    color: white;
+    margin-bottom: 3rem;
+    color: #2c3e50;
     text-align: center;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(44, 62, 80, 0.2);
 }

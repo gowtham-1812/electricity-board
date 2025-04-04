@@ -1,19 +1,19 @@
 .service-status-container {
     padding: 20px;
     font-family: Arial, sans-serif;
-  }
-  
-  .form-group {
+}
+
+.form-group {
     margin-bottom: 20px;
-  }
-  
-  .form-group input {
+}
+
+.form-group input {
     padding: 10px;
     font-size: 16px;
     margin-right: 10px;
-  }
-  
-  .form-group button {
+}
+
+.form-group button {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #007bff;
@@ -21,31 +21,31 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .form-group button:disabled {
+}
+
+.form-group button:disabled {
     background-color: #6c757d;
     cursor: not-allowed;
-  }
-  
-  .error {
+}
+
+.error {
     color: red;
     margin-top: 10px;
-  }
-  
-  .connections-table {
+}
+
+.connections-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-  }
-  
-  .connections-table th,
-  .connections-table td {
+}
+
+.connections-table th,
+.connections-table td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
-  }
-  
-  .connections-table th {
+}
+
+.connections-table th {
     background-color: #f4f4f4;
-  }
+}

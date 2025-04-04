@@ -3,120 +3,145 @@
     margin: 0 auto;
     padding: 20px;
     font-family: 'Arial', sans-serif;
-  }
-  
-  .bill-view h2 {
+}
+
+.bill-view h2 {
     text-align: center;
     margin-bottom: 30px;
     color: #2c3e50;
-  }
-  
-  .bill-view h3 {
+}
+
+.bill-view h3 {
     margin-top: 20px;
     color: #34495e;
     border-bottom: 1px solid #eee;
     padding-bottom: 10px;
-  }
-  
-  .verification-section {
+}
+
+.verification-section {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin: 0 auto 40px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.verification-input-group {
     display: flex;
-    gap: 10px;
-    margin-bottom: 30px;
-  }
-  
-  .verification-section input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  .verification-section button {
-    padding: 10px 20px;
-    background-color: #3498db;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.verification-section input {
+    width: 100%;
+    max-width: 400px;
+    padding: 14px 20px;
+    font-size: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.verification-section input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    outline: none;
+}
+
+.verification-section button {
+    padding: 14px 30px;
+    font-size: 16px;
+    background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .verification-section button:hover {
-    background-color: #2980b9;
-  }
-  
-  .verification-section button:disabled {
+    transition: all 0.3s ease;
+    width: auto;
+    font-weight: 500;
+}
+
+.verification-section button:hover:not(:disabled) {
+    background-color: #0069d9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.verification-section button:disabled {
     background-color: #95a5a6;
     cursor: not-allowed;
-  }
-  
-  .error-message {
+}
+
+.error-message {
     background-color: #f8d7da;
     color: #721c24;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 20px;
-  }
-  
-  .success-message {
+}
+
+.success-message {
     background-color: #d4edda;
     color: #155724;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 20px;
-  }
-  
-  .user-info-section {
+}
+
+.user-info-section {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
-  }
-  
-  .user-info-section p {
+}
+
+.user-info-section p {
     margin: 10px 0;
-  }
-  
-  .bill-section {
+}
+
+.bill-section {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
-  }
-  
-  .bill-details {
+}
+
+.bill-details {
     padding: 15px;
-  }
-  
-  .detail-row {
+}
+
+.detail-row {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
     border-bottom: 1px solid #eee;
-  }
-  
-  .detail-label {
+}
+
+.detail-label {
     font-weight: bold;
     color: #555;
-  }
-  
-  .detail-value {
+}
+
+.detail-value {
     font-family: 'Courier New', monospace;
-  }
-  
-  .status {
+}
+
+.status {
     font-weight: bold;
-  }
-  
-  .status.paid {
+}
+
+.status.paid {
     color: #27ae60;
-  }
-  
-  .status.unpaid {
+}
+
+.status.unpaid {
     color: #e74c3c;
-  }
-  
-  .pay-button {
+}
+
+.pay-button {
     background-color: #27ae60;
     color: white;
     padding: 12px 24px;
@@ -128,23 +153,22 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  .pay-button:hover {
+}
+
+.pay-button:hover {
     background-color: #219d54;
-  }
-  
-  .pay-button:disabled {
+}
+
+.pay-button:disabled {
     background-color: #95a5a6;
     cursor: not-allowed;
-  }
-  
-  .history-section {
+}
+
+.history-section {
     margin-top: 30px;
-  }
-  
-  /* Payment Modal */
-  .payment-modal-overlay {
+}
+
+.payment-modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -155,91 +179,91 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-  }
-  
-  .payment-modal {
+}
+
+.payment-modal {
     background-color: white;
     padding: 30px;
     border-radius: 8px;
     width: 90%;
     max-width: 500px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  .payment-modal h3 {
+}
+
+.payment-modal h3 {
     text-align: center;
     margin-top: 0;
     margin-bottom: 20px;
-  }
-  
-  .payment-details {
+}
+
+.payment-details {
     background-color: #f8f9fa;
     padding: 15px;
     border-radius: 6px;
     margin-bottom: 20px;
-  }
-  
-  .payment-form .form-group {
+}
+
+.payment-form .form-group {
     margin-bottom: 15px;
-  }
-  
-  .payment-form label {
+}
+
+.payment-form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
     color: #555;
-  }
-  
-  .payment-form input {
+}
+
+.payment-form input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-  }
-  
-  .form-row {
+}
+
+.form-row {
     display: flex;
     gap: 15px;
-  }
-  
-  .form-row .form-group {
+}
+
+.form-row .form-group {
     flex: 1;
-  }
-  
-  .modal-buttons {
+}
+
+.modal-buttons {
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
-  }
-  
-  .cancel-button {
+}
+
+.cancel-button {
     padding: 10px 20px;
     background-color: #e74c3c;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  .process-button {
+}
+
+.process-button {
     padding: 10px 20px;
     background-color: #27ae60;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  .cancel-button:hover {
+}
+
+.cancel-button:hover {
     background-color: #c0392b;
-  }
-  
-  .process-button:hover {
+}
+
+.process-button:hover {
     background-color: #219d54;
-  }
-  
-  .cancel-button:disabled,
-  .process-button:disabled {
+}
+
+.cancel-button:disabled,
+.process-button:disabled {
     background-color: #95a5a6;
     cursor: not-allowed;
-  }
+}

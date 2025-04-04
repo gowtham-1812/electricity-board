@@ -9,10 +9,10 @@ import Footer from "./Footer/Footer.jsx";
 import NewsLetter from "./NewsLetter/NewsLetter.jsx";
 import RegisterMobileNumber from "./RegMobNo/RegisterMobileNumber.jsx";
 import RegisterComplaint from "./RegisterComplaint/RegisterComplaint.jsx";
-import "./App.css";
 import { ToastContainer } from "react-toastify";
 import ConsumerBillView from "./BillCalculator/ConsumerBillView.jsx";
 import ConnectionsPage from "./Connection/ConnectionsPage.jsx";
+import "./App.css";
 
 function App() {
     return(

@@ -21,7 +21,7 @@ const NewsLetter = () => {
                 <Typography variant="h4" sx={{ fontWeight: 600, letterSpacing: 1 }}>
                     NEWSLETTER - THE FACTS
                 </Typography>
-                <Typography variant="subtitle1" sx={{ mt: 1, opacity: 0.9 }}>
+                <Typography variant="subtitle1" sx={{ mt: 1.5, opacity: 0.8 }}>
                     Latest updates and announcements
                 </Typography>
             </Box>
