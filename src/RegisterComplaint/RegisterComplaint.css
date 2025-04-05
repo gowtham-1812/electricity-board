@@ -75,46 +75,33 @@ input:focus, textarea:focus, select:focus {
     margin-bottom: 10px;
 }
 
-/* .register-complaint-container {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  } */
-  
-  /* .form-group {
-    margin-bottom: 15px;
-  } */
-  
-  /* .error-message {
-    color: red;
-    font-size: 12px;
-  }
-   */
-  .complaints-table {
+
+.complaints-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-  }
-  
-  .complaints-table th,
-  .complaints-table td {
+}
+
+.complaints-table th,
+.complaints-table td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
-  }
-  
-  .complaints-table th {
+}
+
+.complaints-table th {
     background-color: #f4f4f4;
-  }
-  
-  .delete-btn {
+}
+
+.delete-btn {
     background-color: #dc3545;
     color: white;
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .delete-btn:hover {
+}
+
+.delete-btn:hover {
     background-color: #c82333;
-  }
+}

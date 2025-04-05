@@ -283,20 +283,6 @@ const BillCalculator = () => {
               {new Date(calculation.dueDate).toLocaleDateString()}
             </p>
           </div>
-          {/* <button
-            onClick={handleSubmitReading}
-            disabled={loading}
-            style={{
-              padding: "10px 15px",
-              background: "#2196F3",
-              color: "white",
-              border: "none",
-              borderRadius: "4px",
-              cursor: "pointer",
-            }}
-          >
-            {loading ? "Submitting..." : "Submit Reading"}
-          </button> */}
         </div>
       )}
 

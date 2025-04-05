@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./LoginPage.css";
-import Axios from "axios";
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";

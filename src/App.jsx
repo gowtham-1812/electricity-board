@@ -1,8 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar/Navbar.jsx";
 import {Route, Routes} from "react-router-dom";
-// import BillCalculator from "./BillCalculator/BillCalculator.jsx";
-import BillCalculatorInspector from "./BillCalculator/BillCalculatorInspector.jsx";
 import Home from "./Home/Home.jsx";
 import LoginPage from "./LoginPage/LoginPage.jsx";
 import Footer from "./Footer/Footer.jsx";

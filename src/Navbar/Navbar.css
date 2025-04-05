@@ -162,12 +162,12 @@
     display: inline-block;
     font-family:'Courier New', Courier, monospace;
     font-weight: bold;
-  }
-  
-  .nav-bar-button-side-text:hover {
-    cursor: default;
-  }
+}
 
-  .inspector {
+.nav-bar-button-side-text:hover {
+    cursor: default;
+}
+
+.inspector {
     background-color: #f39c12;
-  }
+}
